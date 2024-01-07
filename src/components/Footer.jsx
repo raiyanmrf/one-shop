@@ -17,7 +17,9 @@ const Footer = () => {
       </div>
 
       <div className='flex flex-col gap-10'>
-        <p className='text-2xl relative font-bold '>Beats Solo Air </p>
+        <p className='text-3xl max-sm:text-2xl relative font-bold '>
+          Beats Solo Air{" "}
+        </p>
         <h2 className='text-6xl max-sm:hidden relative font-bold '>
           Summer Sale
         </h2>
