@@ -18,7 +18,7 @@ const Footer = () => {
 
       <div className='flex flex-col gap-10'>
         <p className='text-2xl relative font-bold '>Beats Solo Air </p>
-        <h2 className='text-6xl max-sm:text-4xl max-sm:right-[50px] z-20 max-sm:whitespace-nowrap relative font-bold '>
+        <h2 className='text-6xl max-sm:text-3xl max-sm:right-[50px] z-20 max-sm:whitespace-nowrap relative font-bold '>
           Summer Sale
         </h2>
         <button
