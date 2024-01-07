@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Shop from "../pages/Shop";
 import Cart from "../pages/Cart";
 import { ShopcontextProvider } from "../hooks/shop-context";
-import Hero from "../pages/Hero";
+import Hero from "../pages/Home";
 const Routerr = () => {
   return (
     <>
