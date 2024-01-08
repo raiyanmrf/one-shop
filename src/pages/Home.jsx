@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <main className='relative top-[80px]'>
+    <main className='relative top-[80px] mx-auto p-1'>
       <Hero />
       <Products />
       <Footer />

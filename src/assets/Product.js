@@ -73,4 +73,4 @@ export const PRODUCTS = [
   },
 ];
 
-export { banner, hpa3, hpb2 };
+export { banner, hpa3, hpa1, hpa4 };
