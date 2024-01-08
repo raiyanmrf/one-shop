@@ -2,7 +2,7 @@ import React from "react";
 import { banner } from "../assets/Product";
 const Footer = () => {
   return (
-    <section className='p-2 relative flex gap-3  text-white justify-between  bg-red-600 h-[400px] w-full'>
+    <section className='p-2 mt-[20px] relative flex gap-3  text-white justify-between  bg-red-600 h-[400px] w-full'>
       <div className='flex flex-col'>
         <h3 className='text-xl px-3 font-bold '>20% off </h3>
         <h1 className='text-[160px] relative sm:bottom-10 max-sm:text-[110px] font-bold text-white'>
