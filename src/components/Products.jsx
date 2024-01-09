@@ -18,7 +18,7 @@ const Products = () => {
             <div key={product.id} className=' '>
               <div
                 className='bg-stone-200 p-2 shadow-lg flex justify-center
-         items-center w-[300px] max-sm:w-[200px] rounded-lg top-0 relative  hover:animate-pulse'
+         items-center w-[300px] max-sm:w-[250px] rounded-lg top-0 relative  hover:animate-pulse'
               >
                 <img width={"200px"} src={product.productImage} alt='?' />
               </div>
@@ -27,10 +27,10 @@ const Products = () => {
                 {product.productName}
               </h3>
               <p className='max-sm:text-sm '>{product.price}$</p>
-              <div className='w-full   flex flex-col items-end relative bottom-9 px-1'>
+              <div className='w-full  flex flex-col items-end relative bottom-9 px-1'>
                 <button
                   onClick={() => addTocart(product.id)}
-                  className='relative transition hover:scale-150 bg-stone-200 px-1 rounded-full right-0 text-xl'
+                  className='relative  bg-stone-200 px-1 rounded-full right-0 text-xl'
                 >
                   <ShoppingCart />
                 </button>

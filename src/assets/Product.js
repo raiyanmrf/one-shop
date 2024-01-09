@@ -14,6 +14,7 @@ export const PRODUCTS = [
     productImage: hpa1,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpa",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const PRODUCTS = [
     productImage: hpa2,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don't just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpa",
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const PRODUCTS = [
     productImage: hpa3,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don't look further, level up with Immortal 1000D headphones.",
+    tag: "hpa",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const PRODUCTS = [
     productImage: hpa4,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpa",
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const PRODUCTS = [
     productImage: hpb1,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpb",
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const PRODUCTS = [
     productImage: hpb2,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpb",
   },
   {
     id: 7,
@@ -62,6 +68,7 @@ export const PRODUCTS = [
     productImage: hpb3,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpb",
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const PRODUCTS = [
     productImage: banner,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpbanner",
   },
 ];
 

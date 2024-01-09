@@ -1,44 +1,79 @@
-import React, { useContext } from "react";
-import { PRODUCTS } from "../assets/Product";
+import React, { useContext, useState } from "react";
+import { PRODUCTS, banner } from "../assets/Product";
 import { Shopcontext } from "../hooks/shop-context";
+import {
+  AiOutlineStar,
+  AiFillStar,
+  AiOutlinePlus,
+  AiOutlineMinus,
+  AiOutlineInbox,
+  AiOutlineInfo,
+} from "react-icons/ai";
 
 const Shop = () => {
   const { cartItems, addTocart } = useContext(Shopcontext);
-
+  const [bigImage, setbigImage] = useState(banner);
   return (
-    <main className='bg-gradient-to-r from-black to-neutral-lime '>
-      <section
-        id='products'
-        className='relative  mt-[70px] flex flex-wrap gap-7 p-3 bg-transparent items-center 
-      justify-center'
-      >
-        {PRODUCTS &&
-          PRODUCTS.map(product => (
-            <div
-              key={product.id}
-              className='flex flex-col bg-neutral-100 p-2 shadow-xl gap-3  
-               items-center w-[300px] max-sm:w-[200px] justify-center mt-[50px] rounded-lg'
-            >
-              <img width={"200px"} src={product.productImage} alt='?' />
+    <main className='relative top-[80px] mx-auto p-1 '>
+      <section className='flex justify-between'>
+        <div>
+          <div>
+            <img src={bigImage} alt='bigImage' />
+          </div>
+          <div className='flex  rounded-lg hover:animate-pulse '>
+            <img src={banner} width={"100px"} alt='smallImages' />
+            <img src={banner} width={"100px"} alt='smallImages' />
+            <img src={banner} width={"100px"} alt='smallImages' />
+            <img src={banner} width={"100px"} alt='smallImages' />
+          </div>
+        </div>
 
-              <h3 className='text-[18px] max-sm:text-sm font-semibold'>
-                {product.productName}
-              </h3>
-              <p className='max-sm:text-sm'>{product.price}$</p>
-              <button
-                onClick={() => addTocart(product.id)}
-                className='px-3 py-1 font-semibold text-center 
-                rounded-[300px] border-2 border-slate-800 bg-white text-black
-                max-sm:text-sm
-       hover:bg-black hover:text-white'
-              >
-                Add to cart{" "}
-                {cartItems[product.id] > 0 && (
-                  <span>({cartItems[product.id]})</span>
-                )}
-              </button>
-            </div>
-          ))}
+        <article>
+          <h2>NAme</h2>
+          <div className='flex'>
+            <AiFillStar style={{ color: "red" }} />
+            <AiFillStar style={{ color: "red" }} />
+            <AiFillStar style={{ color: "red" }} />
+            <AiOutlineStar style={{ color: "red" }} />{" "}
+          </div>
+          <h3>Detail</h3>
+          <p>Desc</p>
+          <h3>Price</h3>
+          <h3 className='flex justify-center items-center'>
+            quantity:
+            <span className='border flex justify-center items-center'>
+              <AiOutlinePlus />
+              <input className='w-10 border' type='text' />
+              <AiOutlineMinus />
+            </span>
+          </h3>
+        </article>
+      </section>
+      <section className='mt-[120px]'>
+        <div className='relative h-[400px] w-full  overflow-x-hidden'>
+          <div className='flex justify-center gap-[15px] mt-[20px] absolute whitespace-nowrap track '>
+            {PRODUCTS &&
+              PRODUCTS.map(product => (
+                <div key={product.id} className='flex-col'>
+                  <div className='mb-2 w-[200px] rounded-lg bg-stone-300 hover:animate-pulse'>
+                    <img src={product.productImage} alt='Product' />
+                  </div>
+                  <div>
+                    <h3 className='text-sm font-semibold'>
+                      {product.productName}
+                    </h3>
+                    <p className='text-sm'>{product.price}$</p>
+                    <button onClick={() => addTocart(product.id)}>
+                      Add to cart{" "}
+                      {cartItems[product.id] > 0 && (
+                        <span>({cartItems[product.id]})</span>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -8,17 +8,17 @@ const Hero = () => {
         Wireless
       </h2>
       <h1 className='text-[160px] relative right-1 max-lg:text-[90px] max-sm:text-[50px] font-bold text-white'>
-        HEADPHONES
+        <span className='relative max-sm:z-20'>HEAD</span>PHONES
       </h1>
       <button className='bg-red-600 w-[150px] max-sm:w-[130px] max-sm:text-xl  py-2 text-2xl text-white font-bold rounded-xl'>
         Shop Now
       </button>
-      <div className='max-sm:absolute flex flex-col sm:items-end max-sm:bottom-9 '>
+      <div className='absolute flex flex-col sm:right-0 bottom-6 '>
         <h3 className='text-xl font-bold text-sky-950'>bOats 1000D</h3>
         <p className='text-lg font-light'>Best Headphone on the market</p>
       </div>
       <img
-        className='absolute top-[0%] max-sm:left-[20%] left-[40%]'
+        className='absolute top-[0%] max-sm:left-[12%] left-[40%]'
         src={banner}
         width={"500px"}
         height={"500px"}

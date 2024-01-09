@@ -30,7 +30,7 @@ const Footer = () => {
           <h2 className='text-6xl max-sm:text-2xl absolute top-2 z-20 right-5 font-bold '>
             Summer Sale
           </h2>
-          <p className='font-l font-light absolute top-24 right-14 max-sm:hidden'>
+          <p className='font-l font-light absolute top-24 right-14 max-lg:hidden'>
             Company that grows from 270 to 480 employees
             <br /> in the last 12 months{" "}
           </p>
