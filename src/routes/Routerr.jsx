@@ -13,14 +13,12 @@ const Routerr = () => {
   return (
     <>
       <BrowserRouter>
-        <ShopcontextProvider>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Hero />} />
-            <Route path='/shop' element={<Shop />} />
-            <Route path='/cart' element={<Cart />} />
-          </Routes>
-        </ShopcontextProvider>
+        <Navbar />
+        {showCart === true && <CartDummy />}
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/shop' element={<Shop />} />
+        </Routes>
       </BrowserRouter>
     </>
   );
