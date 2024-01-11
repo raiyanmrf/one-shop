@@ -1,43 +1,63 @@
 import React, { useContext } from "react";
 import { Shopcontext } from "../hooks/shop-context";
+import { TiDeleteOutline } from "react-icons/ti";
 
 const CartItems = ({ product }) => {
-  const { cartItems, addTocart, removeFromcart, updateCartItem } =
-    useContext(Shopcontext);
+  const {
+    cartItems,
+    addTocart,
+    removeFromcart,
+    updateCartItem,
+    delelteCartItem,
+  } = useContext(Shopcontext);
 
   return (
-    <div
-      key={product.id}
-      className='flex flex-col gap-5  w-[300px] h-[400px] items-center justify-center'
-    >
-      <img width={"200px"} src={product.productImage} alt='?' />
-      <h3 className='text-[18px] font-semibold'>{product.productName}</h3>
-      <p>{product.price}$</p>
+    <>
+      {" "}
+      <div
+        key={product.id}
+        className='flex flex-1   w-full  items-center justify-evenly'
+      >
+        <div className='w-[100px]'>
+          {" "}
+          <img width={"90px"} src={product.productImage} alt='?' />
+        </div>
+        <div className='max-md:text-[7px] text-[11px]'>
+          {" "}
+          <h3 className=' font-semibold'>{product.productName}</h3>
+          <p className=' font-semibold'>{product.price}$</p>
+        </div>
 
-      <div>
-        {" "}
-        <button
-          onClick={() => addTocart(product.id)}
-          className='px-3  border-2 bg-white text-black hover:bg-black hover:text-white'
-        >
-          +
-        </button>
-        <input
-          type='text'
-          className='px-3 w-[50px] border-2 text-center bg-white text-black hover:bg-black hover:text-white'
-          value={cartItems[product.id]}
-          onChange={e => {
-            updateCartItem(Number(e.target.value), product.id);
-          }}
-        />
-        <button
-          onClick={() => removeFromcart(product.id)}
-          className='px-3  border-2 bg-white text-black hover:bg-black hover:text-white'
-        >
-          -
-        </button>
+        <div className='flex max-md:text-[8px] text-sm h-[30px] '>
+          {" "}
+          <button
+            onClick={() => addTocart(product.id)}
+            className='px-1  border-r-2  font-bold bg-white hover:text-black text-green-600'
+          >
+            +
+          </button>
+          <input
+            type='text'
+            className=' w-[20px]  relative z-20 text-center  border-r-2  bg-white text-black'
+            value={cartItems[product.id]}
+            placeholder=''
+          />
+          <button
+            onClick={() => removeFromcart(product.id)}
+            className='px-1 font-bold bg-white hover:text-black text-red-600 '
+          >
+            -
+          </button>
+        </div>
+        <div className='text-red-600'>
+          <TiDeleteOutline
+            onClick={() => {
+              delelteCartItem(product.id);
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

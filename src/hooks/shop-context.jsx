@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { PRODUCTS } from "../assets/Product";
+import { PRODUCTS, hpa3 } from "../assets/Product";
 
 export const Shopcontext = createContext(null);
 
@@ -13,6 +13,9 @@ const defaultShoppingCart = () => {
 
 export const ShopcontextProvider = props => {
   const [cartItems, setcartItems] = useState(defaultShoppingCart);
+  const [showCart, setShowCart] = useState(false);
+  const [bigImage, setbigImage] = useState(hpa3);
+  const [smallImages, setSmallimages] = useState("hpa");
 
   const addTocart = itemId => {
     setcartItems(prev => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -22,6 +25,9 @@ export const ShopcontextProvider = props => {
   };
   const updateCartItem = (newAmount, itemId) => {
     setcartItems(prev => ({ ...prev, [itemId]: newAmount }));
+  };
+  const delelteCartItem = itemId => {
+    setcartItems(prev => ({ ...prev, [itemId]: 0 }));
   };
   const addSubtotal = () => {
     let totalAmount = 0;
@@ -43,6 +49,13 @@ export const ShopcontextProvider = props => {
     removeFromcart,
     updateCartItem,
     addSubtotal,
+    bigImage,
+    setbigImage,
+    smallImages,
+    setSmallimages,
+    showCart,
+    setShowCart,
+    delelteCartItem,
   };
 
   return (

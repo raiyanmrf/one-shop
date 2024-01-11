@@ -1,23 +1,26 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Shop from "../pages/Shop";
-import Cart from "../pages/Cart";
-import { ShopcontextProvider } from "../hooks/shop-context";
+import { Shopcontext } from "../hooks/shop-context";
 import Hero from "../pages/Home";
+import { useContext } from "react";
+import CartDummy from "../pages/CartDummy";
+import Checkout from "../pages/Checkout";
+
 const Routerr = () => {
+  const { showCart } = useContext(Shopcontext);
   return (
     <>
-      <BrowserRouter>
-        <ShopcontextProvider>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Hero />} />
-            <Route path='/shop' element={<Shop />} />
-            <Route path='/cart' element={<Cart />} />
-          </Routes>
-        </ShopcontextProvider>
-      </BrowserRouter>
+      <HashRouter>
+        <Navbar />
+        {showCart === true && <CartDummy />}
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/shop' element={<Shop />} />
+          <Route path='/check' element={<Checkout />} />
+        </Routes>
+      </HashRouter>
     </>
   );
 };

@@ -10,6 +10,9 @@ const Home = () => {
       <Hero />
       <Products />
       <Footer />
+      <div className=' mt-14 text-center text-stone-500'>
+        <p>All rights reserved to boats</p>
+      </div>
     </main>
   );
 };

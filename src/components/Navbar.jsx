@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
-import Lottie from "lottie-react";
-import lottieCart from "../assets/animation/lootieCart.json";
 import { FaCircleNotch } from "react-icons/fa";
+import { Shopcontext } from "../hooks/shop-context";
+import { useContext } from "react";
+
 const Navbar = () => {
+  const { cartItems, showcart, setShowCart } = useContext(Shopcontext);
+  const totalQuantity = Object.values(cartItems).reduce(
+    (accumulator, itemValues) => accumulator + itemValues,
+    0
+  );
   return (
-    <section className='absolute top-0 w-full'>
+    <section className='fixed z-20 bg-white top-0 w-full'>
       <nav className=' p-3 text-slate-900 flex justify-between w-full '>
-        <h2 className='text-4xl font-serif max-sm:text-4xl font-bold ' font>
+        <h2 className='text-4xl font-serif max-sm:text-4xl font-bold '>
           <Link
             className='flex justify-center items-center  font-extrabold'
             to='/'
@@ -20,12 +26,23 @@ const Navbar = () => {
             A T S
           </Link>
         </h2>
-        <div className='flex font-serif font-bold justify-center text-xl items-center gap-10'>
-          <Link to='/shop'>Shop</Link>
-          <Link to='/cart'>
+        <div className='flex font-serif font-bold justify-center text-4xl items-center gap-10'>
+          <div
+            onClick={() => {
+              setShowCart(!showcart);
+            }}
+          >
             <ShoppingCart />
-          </Link>
+            <span
+              className='absolute rounded-full w-[20px]  font-extralight font-mono
+            text-center bg-red-600 text-white text-sm
+            bottom-9 right-[-1px]'
+            >
+              {totalQuantity > 0 && totalQuantity}
+            </span>
+          </div>
         </div>
+        <div className='absolute top-9 right-1'></div>
       </nav>
     </section>
   );

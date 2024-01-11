@@ -3,9 +3,12 @@ import { PRODUCTS } from "../assets/Product";
 import { useContext } from "react";
 import { Shopcontext } from "../hooks/shop-context";
 import { ShoppingCart } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
-  const { cartItems, addTocart } = useContext(Shopcontext);
+  const { cartItems, addTocart, setbigImage, setSmallimages } =
+    useContext(Shopcontext);
+  const navigate = useNavigate();
   return (
     <section className='p-2 mt-10'>
       <h2 className='text-6xl max-sm:text-3xl text-center font-bold text-cyan-950'>
@@ -17,6 +20,11 @@ const Products = () => {
           PRODUCTS.map(product => (
             <div key={product.id} className=' '>
               <div
+                onClick={() => {
+                  setbigImage(product.productImage);
+                  setSmallimages(product.tag);
+                  navigate("/shop");
+                }}
                 className='bg-stone-200 p-2 shadow-lg flex justify-center
          items-center w-[300px] max-sm:w-[250px] rounded-lg top-0 relative  hover:animate-pulse'
               >
@@ -29,7 +37,11 @@ const Products = () => {
               <p className='max-sm:text-sm '>{product.price}$</p>
               <div className='w-full  flex flex-col items-end relative bottom-9 px-1'>
                 <button
-                  onClick={() => addTocart(product.id)}
+                  onClick={() => {
+                    setbigImage(product.productImage);
+                    setSmallimages(product.tag);
+                    navigate("/shop");
+                  }}
                   className='relative  bg-stone-200 px-1 rounded-full right-0 text-xl'
                 >
                   <ShoppingCart />
