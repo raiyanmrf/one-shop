@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,HashRouter } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Shop from "../pages/Shop";
 import Cart from "../pages/Cart";
@@ -8,7 +8,7 @@ import Hero from "../pages/Home";
 const Routerr = () => {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <ShopcontextProvider>
           <Navbar />
           <Routes>
@@ -17,7 +17,7 @@ const Routerr = () => {
             <Route path='/cart' element={<Cart />} />
           </Routes>
         </ShopcontextProvider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
