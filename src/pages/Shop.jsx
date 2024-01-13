@@ -11,7 +11,7 @@ const Shop = () => {
       >
         <ProductDetail />
       </section>
-      <section className=''>
+      <section className='w-screen '>
         <ProductSlideShow />
       </section>
     </main>

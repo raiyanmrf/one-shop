@@ -51,7 +51,10 @@ const ProductDetail = () => {
           PRODUCTS.filter(p => p.productImage === bigImage).map(p => {
             return (
               <div key={p.id} className=' w-full h-[80vh] p-1 '>
-                <h2 className='font-bold md:text-4xl md:text-sky-950 md:font-extrabold text-white max-md:bg-black bg-opacity-70 inline-block text-2xl mb-2'>
+                <h2
+                  className='font-bold md:text-4xl md:font-extrabold
+                 text-white bg-black bg-opacity-70 inline-block text-2xl mb-2'
+                >
                   {p.productName}
                 </h2>
 
@@ -61,7 +64,8 @@ const ProductDetail = () => {
                     onClick={() => {
                       setshowDetails(!showDetails);
                     }}
-                    className='mt-5 text-white bg-black bg-opacity-70 px-2 inline-block font-semibold'
+                    className='mt-5 text-white bg-black bg-opacity-70 text-sm
+                    px-2 inline-block font-semibold'
                   >
                     {showDetails ? "hide details" : "show details"}
                   </button>
@@ -78,21 +82,21 @@ const ProductDetail = () => {
                   <AiOutlineStar style={{ color: "red" }} />
                 </div>
                 <div className='flex w-full justify-end'>
-                  <h3 className='text-red-600 sm:text-4xl lg:text-8xl font-extrabold mt-5'>
+                  <h3 className='text-red-600 text-xl sm:text-4xl lg:text-8xl font-extrabold mt-5'>
                     ${p.price}
                   </h3>
                 </div>
-                <h3 className='flex justify-start gap-1 mt-3 font-semibold items-start'>
-                  <span className=' bg-black bg-opacity-70 text-white'>
+                <h3 className='flex justify-start max-md:text-sm text-lg gap-1 mt-3 font-semibold items-start'>
+                  <span className=' bg-black  bg-opacity-70 md:bg-transparent md:text-black text-white'>
                     Quantity:
                   </span>
                   <span
-                    className='border bg-black bg-opacity-70 text-white
+                    className='border bg-black bg-opacity-70 border-none md:bg-transparent md:text-black text-white
                     font-mono flex justify-center items-center'
                   >
                     <AiOutlinePlus onClick={() => addTocart(p.id)} />
                     <input
-                      className='w-5 text-center border text-black '
+                      className='w-5 text-center  text-black '
                       type='text'
                       value={cartItems[p.id]}
                       onChange={e => {
@@ -107,7 +111,7 @@ const ProductDetail = () => {
                     onClick={() => {
                       addTocart(p.id);
                     }}
-                    className='text-white font-extrabold whitespace-nowrap p-2  border-black bg-red-600  px-1'
+                    className='text-white text-sm md:text-lg font-extrabold whitespace-nowrap   border-black bg-red-600  px-1'
                   >
                     Add to Cart
                   </button>
