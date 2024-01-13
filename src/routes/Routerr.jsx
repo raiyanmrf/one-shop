@@ -9,12 +9,13 @@ import CartDummy from "../pages/CartDummy";
 import Checkout from "../pages/Checkout";
 
 const Routerr = () => {
-  const { showCart } = useContext(Shopcontext);
+  const { showCart, showCheck } = useContext(Shopcontext);
   return (
     <>
       <BrowserRouter>
         <Navbar />
         {showCart === true && <CartDummy />}
+        {showCheck === true && <Checkout />}
         <Routes>
           <Route path='/' element={<Hero />} />
           <Route path='/shop' element={<Shop />} />

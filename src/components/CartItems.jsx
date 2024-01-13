@@ -22,17 +22,17 @@ const CartItems = ({ product }) => {
           {" "}
           <img width={"90px"} src={product.productImage} alt='?' />
         </div>
-        <div className='max-md:text-[7px] text-[11px]'>
+        <div className='max-md:text-[8px] text-[13px]'>
           {" "}
           <h3 className=' font-semibold'>{product.productName}</h3>
           <p className=' font-semibold'>{product.price}$</p>
         </div>
 
-        <div className='flex max-md:text-[8px] text-sm h-[30px] '>
+        <div className='flex max-md:text-sm text-lg h-[30px] '>
           {" "}
           <button
             onClick={() => addTocart(product.id)}
-            className='px-1  border-r-2  font-bold bg-white hover:text-black text-green-600'
+            className='px-1  border-r-2 font-mono font-bold bg-white hover:text-black text-green-600'
           >
             +
           </button>
@@ -44,7 +44,8 @@ const CartItems = ({ product }) => {
           />
           <button
             onClick={() => removeFromcart(product.id)}
-            className='px-1 font-bold bg-white hover:text-black text-red-600 '
+            className='px-1 font-bold font-mono bg-white
+             hover:text-black text-red-600 '
           >
             -
           </button>

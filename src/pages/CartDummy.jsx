@@ -6,12 +6,13 @@ import { ShoppingBagOpen } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { IoChevronBackSharp } from "react-icons/io5";
 const CartDummy = () => {
-  const { cartItems, setShowCart, addSubtotal } = useContext(Shopcontext);
+  const { cartItems, setShowCart, addSubtotal, setShowCheck } =
+    useContext(Shopcontext);
   const totalAmount = addSubtotal();
   const navigate = useNavigate();
 
   return (
-    <main className='fixed overflow-auto max-md:w-[80%]  drop-shadow-lg w-[45%]  h-[100vh]  right-0 container bg-white z-30 '>
+    <main className='fixed overflow-auto max-md:w-[90%]  drop-shadow-lg w-[45%]  h-[100vh]  right-0 container bg-white z-30 '>
       <section className='bg-white   absolute z-20 min-h-screen  flex  w-[100%]  '>
         <section className=' w-full flex flex-col items-center    justify-center py-1'>
           <div
@@ -49,17 +50,12 @@ const CartDummy = () => {
               </p>
               <div className='flex justify-evenly gap-5'>
                 <button
+                  className='px-[31px] py-2 font-bold text-center  border-2  hover:bg-white  hover:text-black
+                 bg-green-600 text-white'
                   onClick={() => {
-                    navigate("/shop");
+                    setShowCheck(true);
                     setShowCart(false);
                   }}
-                  className='px-3 py-2 font-semibold text-center  border-2  hover:bg-white  hover:text-black bg-black text-white'
-                >
-                  Continue shopping
-                </button>
-                <button
-                  className='px-3 py-2 font-semibold text-center  border-2  hover:bg-white  hover:text-black
-                 bg-red-600 text-white'
                 >
                   Checkout
                 </button>

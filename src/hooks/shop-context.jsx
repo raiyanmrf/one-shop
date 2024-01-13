@@ -14,9 +14,9 @@ const defaultShoppingCart = () => {
 export const ShopcontextProvider = props => {
   const [cartItems, setcartItems] = useState(defaultShoppingCart);
   const [showCart, setShowCart] = useState(false);
+  const [showCheck, setShowCheck] = useState(false);
   const [bigImage, setbigImage] = useState(hpa3);
   const [smallImages, setSmallimages] = useState("hpa");
-
   const addTocart = itemId => {
     setcartItems(prev => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
@@ -56,6 +56,8 @@ export const ShopcontextProvider = props => {
     showCart,
     setShowCart,
     delelteCartItem,
+    showCheck,
+    setShowCheck,
   };
 
   return (
