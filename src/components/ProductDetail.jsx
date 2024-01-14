@@ -28,7 +28,7 @@ const ProductDetail = () => {
           <div>
             <img width={"500px"} src={bigImage} alt='bigImage' />
           </div>
-          <div className='flex  gap-2  justify-center items-center'>
+          <div className='flex sm:absolute  left-[-120px] bottom-[10%]  gap-2  justify-center items-center'>
             {PRODUCTS &&
               PRODUCTS.filter(p => p.tag === smallImages).map(p => {
                 return (
@@ -36,7 +36,7 @@ const ProductDetail = () => {
                     <img
                       onClick={() => setbigImage(p.productImage)}
                       className={`hover:bg-red-600 hover:rounded-lg`}
-                      width={"100px"}
+                      width={"50px"}
                       src={p.productImage}
                     />
                   </div>
@@ -91,11 +91,11 @@ const ProductDetail = () => {
                   </h3>
                 </div>
                 <h3 className='flex justify-start max-md:text-sm text-lg gap-1 mt-3 font-semibold items-start'>
-                  <span className=' bg-black  bg-opacity-70 md:bg-transparent md:text-black text-white'>
+                  <span className=' bg-black  bg-opacity-70 xl:bg-transparent xl:text-black text-white'>
                     Quantity:
                   </span>
                   <span
-                    className='border bg-black bg-opacity-70 border-none md:bg-transparent md:text-black text-white
+                    className='border bg-black bg-opacity-70 border-none xl:bg-transparent xl:text-black text-white
                     font-mono flex justify-center items-center'
                   >
                     <AiOutlinePlus onClick={() => addTocart(p.id)} />

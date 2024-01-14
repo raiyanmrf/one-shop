@@ -1,6 +1,7 @@
 import React from "react";
 import ProductDetail from "../components/ProductDetail";
-import ProductSlideShow from "../components/ProductSlideShow";
+
+import Products from "../components/Products";
 
 const Shop = () => {
   return (
@@ -11,8 +12,8 @@ const Shop = () => {
       >
         <ProductDetail />
       </section>
-      <section className='relative w-screen sm:top-[60vh] '>
-        <ProductSlideShow />
+      <section className=' '>
+        <Products />
       </section>
     </main>
   );
