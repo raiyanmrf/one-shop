@@ -12,7 +12,7 @@ const Shop = () => {
       >
         <ProductDetail />
       </section>
-      <section className=' '>
+      <section className='relative w-screen ] '>
         <Products />
       </section>
     </main>
