@@ -5,6 +5,21 @@ import hpa4 from "./animation/products/headphones_a_4.webp";
 import hpb1 from "./animation/products/headphones_b_1.webp";
 import hpb2 from "./animation/products/headphones_b_2.webp";
 import hpb3 from "./animation/products/headphones_b_3.webp";
+import hpb4 from "./animation/products/headphones_b_4.webp";
+import hpc2 from "./animation/products/headphones_c_2.webp";
+import hpc4 from "./animation/products/headphones_c_4.webp";
+import epa1 from "./animation/products/earphones_a_1.webp";
+import epa2 from "./animation/products/earphones_a_2.webp";
+import epa3 from "./animation/products/earphones_a_3.webp";
+import epa4 from "./animation/products/earphones_a_4.webp";
+import epb1 from "./animation/products/earphones_b_1.webp";
+import epb2 from "./animation/products/earphones_b_2.webp";
+import epb3 from "./animation/products/earphones_b_3.webp";
+import epb4 from "./animation/products/earphones_b_4.webp";
+import epc1 from "./animation/products/earphones_c_1.webp";
+import epc2 from "./animation/products/earphones_c_2.webp";
+
+import epc4 from "./animation/products/earphones_c_4.webp";
 import banner from "./animation/products/banner.webp";
 export const PRODUCTS = [
   {
@@ -18,6 +33,15 @@ export const PRODUCTS = [
   },
   {
     id: 2,
+    productName: "boAt BassHeads 440",
+    price: 900,
+    productImage: epa1,
+    productDesc:
+      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+    tag: "epa",
+  },
+  {
+    id: 3,
     productName: "boAt Mortal 1000D",
     price: 1999.0,
     productImage: hpa2,
@@ -26,7 +50,16 @@ export const PRODUCTS = [
     tag: "hpa",
   },
   {
-    id: 3,
+    id: 4,
+    productName: "boAt BassHeads 40",
+    price: 100,
+    productImage: epa2,
+    productDesc:
+      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+    tag: "epa",
+  },
+  {
+    id: 5,
     productName: "boAt rockjz 1000D",
     price: 699.0,
     productImage: hpa3,
@@ -35,7 +68,16 @@ export const PRODUCTS = [
     tag: "hpa",
   },
   {
-    id: 4,
+    id: 6,
+    productName: "boAt BassHeads 1000D",
+    price: 700,
+    productImage: epa3,
+    productDesc:
+      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+    tag: "epa",
+  },
+  {
+    id: 7,
     productName: "boAt jacket 1000D",
     price: 228.0,
     productImage: hpa4,
@@ -44,25 +86,53 @@ export const PRODUCTS = [
     tag: "hpa",
   },
   {
-    id: 5,
+    id: 8,
+    productName: "boAt BAssHeads 00D",
+    price: 990,
+    productImage: epa4,
+    productDesc:
+      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+    tag: "epa",
+  },
+  {
+    id: 9,
     productName: "boAt Led 1000D",
-    price: 19.99,
+    price: 199,
     productImage: hpb1,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
     tag: "hpb",
   },
   {
-    id: 6,
+    id: 10,
+    productName: "boAt AirDopes ocean",
+    price: 990,
+    productImage: epb1,
+    productDesc:
+      "Immerse yourself in sound like never before with Airdopes Max. With ENx™ Technology and Quad Mics, experience crystal-clear audio and seamless communication. Activate BEAST™ Mode for ultra-low latency, unleashing the full potential of your audio. Live the sound to the max with Airdopes Max.",
+    tag: "epb",
+  },
+  {
+    id: 11,
     productName: "boAt 1000D SPECTRUM ",
-    price: 68.0,
+    price: 680,
     productImage: hpb2,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
     tag: "hpb",
   },
+
   {
-    id: 7,
+    id: 12,
+    productName: "boAt AirDopes Blackend",
+    price: 490,
+    productImage: epb2,
+    productDesc:
+      "Immerse yourself in sound like never before with Airdopes Max. With ENx™ Technology and Quad Mics, experience crystal-clear audio and seamless communication. Activate BEAST™ Mode for ultra-low latency, unleashing the full potential of your audio. Live the sound to the max with Airdopes Max.",
+    tag: "epb",
+  },
+  {
+    id: 13,
     productName: "boAt live 1000D",
     price: 120.0,
     productImage: hpb3,
@@ -70,14 +140,79 @@ export const PRODUCTS = [
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
     tag: "hpb",
   },
+
   {
-    id: 8,
+    id: 14,
+    productName: "boAt Airdopes blueDream",
+    price: 590,
+    productImage: epb3,
+    productDesc:
+      "Immerse yourself in sound like never before with Airdopes Max. With ENx™ Technology and Quad Mics, experience crystal-clear audio and seamless communication. Activate BEAST™ Mode for ultra-low latency, unleashing the full potential of your audio. Live the sound to the max with Airdopes Max.",
+    tag: "epb",
+  },
+  {
+    id: 15,
     productName: "boAt Immortal 1000D",
     price: 40.0,
-    productImage: banner,
+    productImage: hpb4,
     productDesc:
       "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
-    tag: "hpbanner",
+    tag: "hpb",
+  },
+  {
+    id: 16,
+    productName: "boAt AirDopes cyanide",
+    price: 660,
+    productImage: epb4,
+    productDesc:
+      "Immerse yourself in sound like never before with Airdopes Max. With ENx™ Technology and Quad Mics, experience crystal-clear audio and seamless communication. Activate BEAST™ Mode for ultra-low latency, unleashing the full potential of your audio. Live the sound to the max with Airdopes Max.",
+    tag: "epb",
+  },
+  {
+    id: 17,
+    productName: "boAt Immortal 1000D",
+    price: 400,
+    productImage: hpc2,
+    productDesc:
+      "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpc",
+  },
+  {
+    id: 18,
+    productName: "boAt Rockerz bullet  Pro ",
+    price: 980,
+    productImage: epc1,
+    productDesc:
+      "An artist’s only dream is for his audience to experience their art the way it’s meant to be - in its purest form. Rockerz  Pro is a celebration of everything music and its craft stands for. Each feature handpicked to deliver sound at its very best, including Dynamic 10mm Drivers, 60HRS of playback, ASAP Charge, ENx™ Technology, and more. Live The Sound with Rockerz 333 Pro bluetooth earphones",
+    tag: "epc",
+  },
+  {
+    id: 19,
+    productName: "boAt Immortal 1000D",
+    price: 500,
+    productImage: hpc4,
+    productDesc:
+      "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel Surround Sound and Dolby Atmos that unleashes the winning beast inside you. Equipped with 50mm drivers, get a powerful 360° gaming experience like no other. Now, you can conquer every game with a sound that provides position accuracy and abstracts. Your everyday gaming is now double the fun with its RGB LED lights. Its lightweight and ergonomic build ensure you have a comfortable bender with your friends. Don’t look further, level up with Immortal 1000D headphones.",
+    tag: "hpc",
+  },
+
+  {
+    id: 20,
+    productName: "boAt Rockerz Gradient Pro ",
+    price: 640,
+    productImage: epc2,
+    productDesc:
+      "An artist’s only dream is for his audience to experience their art the way it’s meant to be - in its purest form. Rockerz  Pro is a celebration of everything music and its craft stands for. Each feature handpicked to deliver sound at its very best, including Dynamic 10mm Drivers, 60HRS of playback, ASAP Charge, ENx™ Technology, and more. Live The Sound with Rockerz 333 Pro bluetooth earphones",
+    tag: "epc",
+  },
+  {
+    id: 21,
+    productName: "boAt Rockerz Dominant  Pro ",
+    price: 240,
+    productImage: epc4,
+    productDesc:
+      "An artist’s only dream is for his audience to experience their art the way it’s meant to be - in its purest form. Rockerz  Pro is a celebration of everything music and its craft stands for. Each feature handpicked to deliver sound at its very best, including Dynamic 10mm Drivers, 60HRS of playback, ASAP Charge, ENx™ Technology, and more. Live The Sound with Rockerz 333 Pro bluetooth earphones",
+    tag: "epc",
   },
 ];
 

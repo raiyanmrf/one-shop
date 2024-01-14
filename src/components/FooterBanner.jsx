@@ -1,6 +1,8 @@
 import React from "react";
 import { banner } from "../assets/Product";
-const Footer = () => {
+import { useNavigate } from "react-router-dom";
+const FooterBanner = () => {
+  const nav = useNavigate();
   return (
     <section
       className=' mt-[20px] relative flex 
@@ -42,6 +44,9 @@ const Footer = () => {
           Beats Solo Air{" "}
         </p>
         <button
+          onClick={() => {
+            nav("/shop");
+          }}
           className='text-red-600 w-[150px] absolute bottom-2 right-5 z-20
         max-lg:w-[92px] max-lg:text-lg  py-2 text-2xl
          bg-white font-bold rounded-xl'
@@ -60,4 +65,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterBanner;

@@ -13,7 +13,7 @@
   }
 
   .track {
-    animation: marquee 7s linear infinite;
+    animation: marquee 13s linear infinite;
   }
   .track:hover {
     animation-play-state: paused;

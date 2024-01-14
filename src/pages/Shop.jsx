@@ -7,11 +7,11 @@ const Shop = () => {
     <main className='relative top-[80px]  container'>
       <section
         className='flex relative 
-      top-0  justify-center   items-center gap-2lg:gap-28 max-lg:gap-3'
+      top-0  justify-center h-screen  items-center gap-2 lg:gap-28 max-lg:gap-3 '
       >
         <ProductDetail />
       </section>
-      <section className='w-screen '>
+      <section className='relative w-screen sm:top-[60vh] '>
         <ProductSlideShow />
       </section>
     </main>

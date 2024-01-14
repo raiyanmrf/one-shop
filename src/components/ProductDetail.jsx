@@ -28,7 +28,7 @@ const ProductDetail = () => {
           <div>
             <img width={"500px"} src={bigImage} alt='bigImage' />
           </div>
-          <div className='flex relative top-5 gap-2  justify-center items-center'>
+          <div className='flex  gap-2  justify-center items-center'>
             {PRODUCTS &&
               PRODUCTS.filter(p => p.tag === smallImages).map(p => {
                 return (
@@ -46,7 +46,7 @@ const ProductDetail = () => {
         </div>
       </article>
 
-      <article className='w-[100%] sm:w-[80%] md:w-[70%] lg:w-[60%] relative z-10 h-screen  flex justify-center items-center container'>
+      <article className='w-[100%] h-[100vh] sm:w-[80%] md:w-[70%] lg:w-[60%] relative z-10 flex justify-center items-center container'>
         {PRODUCTS &&
           PRODUCTS.filter(p => p.productImage === bigImage).map(p => {
             return (
@@ -70,7 +70,11 @@ const ProductDetail = () => {
                     {showDetails ? "hide details" : "show details"}
                   </button>
                   {showDetails && (
-                    <p className='max-sm:text-[11px] absolute bg-stone-100 sm:p-5 font-semibold text-sm '>
+                    <p
+                      className='max-sm:text-[11px] 
+                    absolute bg-stone-100 bg-opacity-90 sm:p-5 
+                    font-semibold text-sm max-w-lg '
+                    >
                       {p.productDesc.slice(0, 400)}.
                     </p>
                   )}
@@ -82,7 +86,7 @@ const ProductDetail = () => {
                   <AiOutlineStar style={{ color: "red" }} />
                 </div>
                 <div className='flex w-full justify-end'>
-                  <h3 className='text-red-600 text-xl sm:text-4xl lg:text-8xl font-extrabold mt-5'>
+                  <h3 className='text-red-600 text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold mt-5'>
                     ${p.price}
                   </h3>
                 </div>

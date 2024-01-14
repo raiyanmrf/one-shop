@@ -12,7 +12,7 @@ const CartDummy = () => {
   const navigate = useNavigate();
 
   return (
-    <main className='fixed overflow-auto max-md:w-[90%]  drop-shadow-lg w-[45%]  h-[100vh]  right-0 container bg-white z-30 '>
+    <main className='fixed overflow-auto max-md:w-[90%]  drop-shadow-lg w-[55%]  h-[100vh]  right-0 container bg-white z-30 '>
       <section className='bg-white   absolute z-20 min-h-screen  flex  w-[100%]  '>
         <section className=' w-full flex flex-col items-center    justify-center py-1'>
           <div
@@ -25,12 +25,12 @@ const CartDummy = () => {
                 setShowCart(false);
               }}
             >
-              <IoChevronBackSharp /> Back to Cart
+              <IoChevronBackSharp /> Go back
             </button>
           </div>
 
           <div className='   w-full min-h-[300vh] flex items-center'>
-            <div className=' absolute mt-[110px]  h-full  w-full'>
+            <div className=' absolute mt-[250px]  h-full  w-full'>
               {PRODUCTS &&
                 PRODUCTS.map(product => {
                   if (cartItems[product.id] !== 0) {
@@ -41,8 +41,8 @@ const CartDummy = () => {
           </div>
           {totalAmount > 0 ? (
             <div
-              className=' fixed mt-9  z-20 w-[100%] bg-white
-             bottom-0 flex flex-col gap-5 justify-center items-center'
+              className='sticky mt-9  z-20 w-[100%] bg-white
+             bottom-6 flex flex-col gap-5 justify-center items-center'
             >
               <p className='text-xl max-md:text-lg font-semibold'>
                 Subtotal <span className='text-green-600'>{totalAmount} $</span>

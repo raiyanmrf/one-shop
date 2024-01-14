@@ -11,7 +11,7 @@ const ProductSlideShow = () => {
   return (
     <>
       {" "}
-      <h1 className='text-3xl font-bold text-sky-950 text-center mb-5'>
+      <h1 className='text-3xl font-bold text-sky-950 text-center '>
         You may also Like these products..
       </h1>
       <div className='relative h-[400px] w-full  overflow-x-hidden'>
@@ -24,7 +24,7 @@ const ProductSlideShow = () => {
                     setbigImage(product.productImage);
                     setSmallimages(product.tag);
                   }}
-                  className='mb-2 w-[200px] rounded-lg bg-stone-300 hover:animate-pulse'
+                  className='mb-2 w-[150px] rounded-lg bg-stone-300 hover:animate-pulse'
                 >
                   <img src={product.productImage} alt='Product' />
                 </div>
