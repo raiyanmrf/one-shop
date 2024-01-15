@@ -48,8 +48,8 @@ const FooterBanner = () => {
             onClick={() => {
               nav("/shop");
             }}
-            className='text-red-600 w-[150px] absolute bottom-2 right-5 z-20
-        max-lg:w-[92px] max-lg:text-lg  py-2 text-2xl
+            className='text-red-600 w-[150px] absolute bottom-2 right-5 z-50
+        max-lg:w-[92px] max-lg:text-lg  py-2 text-2xl 
          bg-white font-bold rounded-xl'
           >
             Shop Now

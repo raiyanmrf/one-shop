@@ -4,7 +4,7 @@ import { SiAmericanexpress } from "react-icons/si";
 import { IoChevronBackSharp } from "react-icons/io5";
 import { useContext } from "react";
 import { Shopcontext } from "../hooks/shop-context";
-
+import { motion } from "framer-motion";
 const Checkout = () => {
   const [visa, setvisa] = useState(false);
   const [master, setmaster] = useState(false);
@@ -13,7 +13,10 @@ const Checkout = () => {
   const { setShowCheck, setShowCart } = useContext(Shopcontext);
   return (
     <>
-      <form
+      <motion.form
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
         onSubmit={() => {
           window.confirm("Are You Sure to Proceed");
         }}
@@ -188,7 +191,7 @@ const Checkout = () => {
             Proceed to Checkout
           </button>
         </div>
-      </form>
+      </motion.form>
     </>
   );
 };

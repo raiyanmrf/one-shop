@@ -7,6 +7,7 @@ import {
   AiOutlinePlus,
   AiOutlineMinus,
 } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const ProductDetail = () => {
   const [showDetails, setshowDetails] = useState(false);
@@ -25,9 +26,13 @@ const ProductDetail = () => {
       <article id='d' className='absolute top-0   '>
         {" "}
         <div>
-          <div>
+          <motion.div
+            animate={{ y: 0 }}
+            initial={{ y: "100%" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
             <img width={"500px"} src={bigImage} alt='bigImage' />
-          </div>
+          </motion.div>
           <div className='flex sm:absolute  left-[-120px] bottom-[10%]  gap-2  justify-center items-center'>
             {PRODUCTS &&
               PRODUCTS.filter(p => p.tag === smallImages).map(p => {

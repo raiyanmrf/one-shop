@@ -5,6 +5,7 @@ import CartItems from "../components/CartItems";
 import { ShoppingBagOpen } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { IoChevronBackSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 const CartDummy = () => {
   const { cartItems, setShowCart, addSubtotal, setShowCheck } =
     useContext(Shopcontext);
@@ -12,7 +13,12 @@ const CartDummy = () => {
   const navigate = useNavigate();
 
   return (
-    <main className='fixed overflow-auto max-md:w-[90%]  drop-shadow-lg w-[55%]  h-[100vh]  right-0 container bg-white z-30 '>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      className='fixed overflow-auto max-md:w-[90%]  drop-shadow-lg w-[55%]  h-[100vh]  right-0 container bg-white z-30 '
+    >
       <section className='bg-white   absolute z-20 min-h-screen  flex  w-[100%]  '>
         <section className=' w-full flex flex-col items-center    justify-center py-1'>
           <div
@@ -73,7 +79,7 @@ const CartDummy = () => {
           </div>
         </section>
       </section>
-    </main>
+    </motion.main>
   );
 };
 

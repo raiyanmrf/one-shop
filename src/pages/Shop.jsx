@@ -1,11 +1,18 @@
 import React from "react";
 import ProductDetail from "../components/ProductDetail";
-
+import { motion } from "framer-motion";
 import Products from "../components/Products";
+import FooterBanner from "../components/FooterBanner";
 
 const Shop = () => {
   return (
-    <main className='relative top-[80px] px-3 container'>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      exit={{ opacity: 1 }}
+      className='relative top-[80px] px-3 container'
+    >
       <section
         className='flex relative 
       top-0  justify-center h-screen  items-center gap-2 lg:gap-28 max-lg:gap-3 '
@@ -15,7 +22,8 @@ const Shop = () => {
       <section className='relative w-screen ] '>
         <Products />
       </section>
-    </main>
+      <FooterBanner />
+    </motion.main>
   );
 };
 
