@@ -22,7 +22,7 @@ const ProductDetail = () => {
   } = useContext(Shopcontext);
   return (
     <>
-      <article className='absolute top-0   '>
+      <article id='d' className='absolute top-0   '>
         {" "}
         <div>
           <div>
@@ -52,8 +52,8 @@ const ProductDetail = () => {
             return (
               <div key={p.id} className=' w-full h-[80vh] p-1 '>
                 <h2
-                  className='font-bold md:text-4xl md:font-extrabold
-                 text-white bg-black bg-opacity-70 inline-block text-2xl mb-2'
+                  className='font-bold max-lg:text-sm text-xl md:font-extrabold px-1
+                  max-lg:text-white max-lg:bg-black max-lg:-z-0 bg-opacity-70 inline-block  mb-2'
                 >
                   {p.productName}
                 </h2>

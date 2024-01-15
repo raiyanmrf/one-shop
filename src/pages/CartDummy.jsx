@@ -16,41 +16,27 @@ const CartDummy = () => {
       <section className='bg-white   absolute z-20 min-h-screen  flex  w-[100%]  '>
         <section className=' w-full flex flex-col items-center    justify-center py-1'>
           <div
-            className='sticky bg-white flex justify-center z-30
+            className='sticky bg-white flex justify-evenly z-30 
            items-center top-0  h-[100px] w-[100%]'
           >
             <button
-              className='flex text-sky-950 font-bold text-xl items-center justify-center gap-2'
+              className='flex text-sky-950 font-bold text-xl max-md:text-sm items-center justify-center gap-2'
               onClick={() => {
                 setShowCart(false);
               }}
             >
               <IoChevronBackSharp /> Go back
             </button>
-          </div>
 
-          <div className='   w-full min-h-[300vh] flex items-center'>
-            <div className=' absolute mt-[250px]  h-full  w-full'>
-              {PRODUCTS &&
-                PRODUCTS.map(product => {
-                  if (cartItems[product.id] !== 0) {
-                    return <CartItems key={product.id} product={product} />;
-                  }
-                }).reverse()}
-            </div>
-          </div>
-          {totalAmount > 0 ? (
-            <div
-              className='sticky mt-9  z-20 w-[100%] bg-white
-             bottom-6 flex flex-col gap-5 justify-center items-center'
-            >
-              <p className='text-xl max-md:text-lg font-semibold'>
-                Subtotal <span className='text-green-600'>{totalAmount} $</span>
-                <hr />
-              </p>
-              <div className='flex justify-evenly gap-5'>
+            {totalAmount > 0 && (
+              <>
+                {" "}
+                <p className='text-xl max-md:text-sm font-semibold'>
+                  Subtotal{" "}
+                  <span className='text-green-600'>{totalAmount} $</span>
+                </p>
                 <button
-                  className='px-[31px] py-2 font-bold text-center  border-2  hover:bg-white  hover:text-black
+                  className='px-[20px]  font-bold text-center  border-2  hover:bg-white  hover:text-black
                  bg-green-600 text-white'
                   onClick={() => {
                     setShowCheck(true);
@@ -59,20 +45,32 @@ const CartDummy = () => {
                 >
                   Checkout
                 </button>
-              </div>
+              </>
+            )}
+          </div>
+
+          <div className='   w-full min-h-[100vh] flex items-center'>
+            <div className=' absolute mt-[250px]  h-full  w-full'>
+              {PRODUCTS &&
+                PRODUCTS.map(product => {
+                  if (cartItems[product.id] !== 0) {
+                    return <CartItems key={product.id} product={product} />;
+                  }
+                }).reverse()}
             </div>
-          ) : (
-            <div
-              className=' mt-9 absolute top-14 z-20 w-[100%] h-[700px] bg-white
+            {totalAmount < 1 && (
+              <div
+                className=' mt-9 absolute top-14 z-20 w-[100%] h-[700px] bg-white
              flex flex-col gap-5 justify-center items-center'
-            >
-              <p className='flex justify-between text-xl absolute top-[200px] gap-3 items-center'>
-                Your Cart is Empty
-                <ShoppingBagOpen />
-              </p>
-              <div className='flex absolute bottom-[200px]'></div>
-            </div>
-          )}
+              >
+                <p className='flex justify-between text-xl absolute top-[200px] gap-3 items-center'>
+                  Your Cart is Empty
+                  <ShoppingBagOpen />
+                </p>
+                <div className='flex absolute bottom-[200px]'></div>
+              </div>
+            )}
+          </div>
         </section>
       </section>
     </main>

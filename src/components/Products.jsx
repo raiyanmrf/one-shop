@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Shopcontext } from "../hooks/shop-context";
 import { ShoppingCart } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
+import ProductDetail from "./ProductDetail";
 
 const Products = () => {
   const { cartItems, addTocart, setbigImage, setSmallimages } =
@@ -19,36 +20,48 @@ const Products = () => {
         {PRODUCTS &&
           PRODUCTS.map(product => (
             <div key={product.id} className=' '>
-              <div
-                onClick={() => {
-                  setbigImage(product.productImage);
-                  setSmallimages(product.tag);
-                  navigate("/shop");
-                }}
-                className='bg-stone-200 p-2 shadow-lg flex justify-center
-         items-center w-[300px] max-sm:w-[250px] rounded-lg top-0 relative  hover:animate-pulse'
-              >
-                <img width={"200px"} src={product.productImage} alt='?' />
-              </div>
-
-              <h3 className='text-[18px] max-sm:text-sm font-semibold'>
-                {product.productName}
-              </h3>
-              <p className='max-sm:text-sm '>{product.price}$</p>
-              <div className='w-full  flex flex-col items-end relative bottom-9 px-1'>
-                <button
+              <a href='#d'>
+                <div
                   onClick={() => {
                     setbigImage(product.productImage);
                     setSmallimages(product.tag);
                     navigate("/shop");
                   }}
-                  className='relative  bg-stone-200 px-1 rounded-full right-0 text-xl'
+                  className='bg-stone-200 p-2 shadow-lg flex justify-center
+         items-center w-[300px] max-sm:w-[150px] object-contain rounded-lg top-0 relative  hover:bg-red-600'
                 >
-                  <ShoppingCart />
-                </button>
+                  <img width={"200px"} src={product.productImage} alt='?' />
+                </div>
+              </a>
+
+              <h3 className='text-[18px] mt-2 max-sm:text-[12px] font-semibold'>
+                {product.productName}
+              </h3>
+              <p className='max-sm:text-sm text-red-500 font-mono font-bold '>
+                {product.price}$
+              </p>
+              <div className='w-full  flex flex-col items-end relative bottom-9 px-1'>
+                <a href='#d'>
+                  {" "}
+                  <button
+                    onClick={() => {
+                      setbigImage(product.productImage);
+                      setSmallimages(product.tag);
+                      navigate("/shop");
+                    }}
+                    className='relative  bg-stone-200 px-1 rounded-full max-sm:top-7
+                   right-[0px] text-xl'
+                  >
+                    <ShoppingCart />
+                  </button>
+                </a>
 
                 {cartItems[product.id] > 0 && (
-                  <p className='absolute rounded-[100%] w-[15px] text-center bg-red-600 text-white text-[11px] bottom-3 right-[-5px]'>
+                  <p
+                    className='absolute rounded-[100%] 
+                  w-[15px] text-center bg-red-600 text-white font-mono
+                  text-[11px] bottom-3 right-[-5px]'
+                  >
                     {cartItems[product.id]}
                   </p>
                 )}

@@ -3,13 +3,8 @@ import { Shopcontext } from "../hooks/shop-context";
 import { TiDeleteOutline } from "react-icons/ti";
 
 const CartItems = ({ product }) => {
-  const {
-    cartItems,
-    addTocart,
-    removeFromcart,
-    updateCartItem,
-    delelteCartItem,
-  } = useContext(Shopcontext);
+  const { cartItems, addTocart, removeFromcart, delelteCartItem } =
+    useContext(Shopcontext);
 
   return (
     <>
@@ -24,8 +19,8 @@ const CartItems = ({ product }) => {
         </div>
         <div className='max-md:text-[8px] text-[13px]'>
           {" "}
-          <h3 className=' font-semibold'>{product.productName}</h3>
-          <p className=' font-semibold'>{product.price}$</p>
+          <h3 className=' font-bold'>{product.productName}</h3>
+          <p className='text-red-600 font-semibold'>{product.price}$</p>
         </div>
 
         <div className='flex max-md:text-sm text-lg h-[30px] '>

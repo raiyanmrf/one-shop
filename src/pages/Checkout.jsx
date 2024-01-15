@@ -17,16 +17,16 @@ const Checkout = () => {
         onSubmit={() => {
           window.confirm("Are You Sure to Proceed");
         }}
-        className='flex absolute z-40 bg-slate-50 mt-[100px] top-0 right-0 gap-5
-     py-8 justify-start items-start flex-col sm:flex-row max-w-[800px] px-8 h-[150vh] '
+        className='flex absolute container z-40 overscroll-y-scroll bg-white  top-0 right-0 gap-5
+     py-8 justify-start items-start flex-col max-sm:w-[90%]  max-w-[500px] px-1 text-sm  '
       >
         {/* Billing Address Section */}
         <div
-          className='absolute bg-stone-50 flex justify-center items-center  z-30
-            w-full top-[-100px] right-0 h-[100px]'
+          className='fixed bg-white flex  justify-center items-center  z-30
+            w-full left-[30%] top-0 h-[30px]'
         >
           <button
-            className='flex text-sky-950 font-bold text-xl items-center justify-center gap-2'
+            className='flex text-sky-950 font-bold text-sm items-center justify-center gap-2'
             onClick={e => {
               e.stopPropagation();
 
@@ -38,8 +38,8 @@ const Checkout = () => {
           </button>
         </div>
 
-        <div className='max-w-sm max-sm:w-[100%] mx-auto sm:w-1/2'>
-          <h2 className='text-lg font-bold mb-4'>Billing Address</h2>
+        <div className='max-w-sm w-[100%] mx-auto '>
+          <h2 className='text-sm font-bold mb-4'>Billing Address</h2>
           <div>
             <label htmlFor='fullName' className='block mb-2'>
               Full Name
@@ -77,11 +77,11 @@ const Checkout = () => {
         </div>
 
         {/* Payment Section */}
-        <div className='max-w-sm mx-auto sm:w-1/2'>
-          <h2 className='text-lg font-bold mb-4'>Payment Section</h2>
+        <div className='max-w-sm mx-auto w-full'>
+          <h2 className='text-sm font-bold mb-4'>Payment Section</h2>
           <div>
             <label htmlFor='cardType' className='block mb-2'>
-              Accepted Card
+              Select a card
             </label>
             <div className='flex space-x-4 mb-4'>
               <button
@@ -155,38 +155,34 @@ const Checkout = () => {
 
             <div className='flex mb-4'>
               <div className='w-1/2 mr-2'>
-                <label htmlFor='expMonth' className='block mb-2'>
-                  Exp Month
+                <label htmlFor='CVV' className='block mb-2'>
+                  CVV
                 </label>
                 <input
                   type='text'
-                  id='expMonth'
+                  id='CVV'
                   className='w-full p-2 border'
-                  placeholder='MM'
+                  placeholder='CVV'
                   required
                 />
               </div>
 
               <div className='w-1/2 ml-2'>
-                <label htmlFor='expYearCVV' className='block mb-2'>
-                  Exp Year, CVV
+                <label htmlFor='expDAte' className='block mb-2'>
+                  Exp Date
                 </label>
                 <input
                   type='text'
-                  id='expYearCVV'
+                  id='expDAte'
                   className='w-full p-2 border'
-                  placeholder='YY, CVV'
+                  placeholder='DD/MM/YY'
                   required
                 />
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Proceed to Checkout Button */}
-        <div className='sm:absolute sm:right-[30%]  sm:top-[450px]'>
           <button
-            className='bg-green-700 text-white py-2 px-4 rounded-full'
+            className='bg-green-700 font-mono font-bold mt-10 whitespace-nowrap w-full px-[2rem] py-2 text-white  rounded-full'
             type='submit'
           >
             Proceed to Checkout

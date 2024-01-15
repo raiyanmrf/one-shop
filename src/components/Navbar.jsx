@@ -13,7 +13,7 @@ const Navbar = () => {
   );
   return (
     <section className='fixed z-20 bg-white top-0 w-full'>
-      <nav className=' p-3 text-slate-900 flex justify-between w-full '>
+      <nav className='px-7 py-3 text-slate-900 flex justify-between w-full '>
         <h2 className='text-4xl font-serif max-sm:text-4xl font-bold '>
           <Link
             className='flex justify-center items-center  font-extrabold'
@@ -36,7 +36,7 @@ const Navbar = () => {
             <span
               className='absolute rounded-full w-[20px]  font-extralight font-mono
             text-center bg-red-600 text-white text-sm
-            bottom-9 right-[-1px]'
+            bottom-9 right-[17px]'
             >
               {totalQuantity > 0 && totalQuantity}
             </span>
