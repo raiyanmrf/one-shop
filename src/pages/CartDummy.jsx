@@ -17,7 +17,7 @@ const CartDummy = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className='fixed overflow-auto max-md:w-[90%]  drop-shadow-lg w-[55%]  h-[100vh]  right-0 container bg-white z-30 '
+      className='fixed z-50 overflow-auto max-md:w-[90%]  drop-shadow-lg w-[55%]  h-[100vh]  right-0 container bg-white  '
     >
       <section className='bg-white   absolute z-20 min-h-screen  flex  w-[100%]  '>
         <section className=' w-full flex flex-col items-center    justify-center py-1'>

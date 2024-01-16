@@ -28,7 +28,7 @@ const Checkout = () => {
           nav("/");
           toast.success("Payment is Successful");
         }}
-        className='flex absolute container z-40 overscroll-y-scroll bg-white  top-0 right-0 gap-5
+        className='flex absolute container  z-50 overscroll-y-scroll bg-white  top-0 right-0 gap-5
      py-8 justify-start items-start flex-col max-sm:w-[90%]  max-w-[500px] px-1 text-sm  '
       >
         {/* Billing Address Section */}

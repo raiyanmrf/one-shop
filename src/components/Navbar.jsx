@@ -12,7 +12,7 @@ const Navbar = () => {
     0
   );
   return (
-    <section className='fixed z-50 bg-white top-0 w-full'>
+    <section className='fixed z-40 bg-white top-0 w-full'>
       <nav className='px-7 py-3 text-slate-900 flex justify-between w-full '>
         <h2 className='text-4xl font-serif max-sm:text-4xl font-bold '>
           <Link
