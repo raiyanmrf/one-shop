@@ -24,7 +24,7 @@ import banner from "./animation/products/banner.webp";
 export const PRODUCTS = [
   {
     id: 1,
-    productName: "boAt Immortal 1000D",
+    productName: "BOAt Star Black",
     price: 999.0,
     productImage: hpa1,
     productDesc:
@@ -33,16 +33,16 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    productName: "boAt BassHeads 440",
+    productName: "BOAt BassHeads 440",
     price: 900,
     productImage: epa1,
     productDesc:
-      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+      "BOAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
     tag: "epa",
   },
   {
     id: 3,
-    productName: "boAt Mortal 1000D",
+    productName: "BOAt Star Ash",
     price: 1999.0,
     productImage: hpa2,
     productDesc:
@@ -51,16 +51,16 @@ export const PRODUCTS = [
   },
   {
     id: 4,
-    productName: "boAt BassHeads 40",
+    productName: "BOAt BassHeads 40",
     price: 100,
     productImage: epa2,
     productDesc:
-      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+      "BOAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
     tag: "epa",
   },
   {
     id: 5,
-    productName: "boAt rockjz 1000D",
+    productName: "BOAt rockjz 1000D",
     price: 699.0,
     productImage: hpa3,
     productDesc:
@@ -69,16 +69,16 @@ export const PRODUCTS = [
   },
   {
     id: 6,
-    productName: "boAt BassHeads 1000D",
+    productName: "BOAt BassHeads 1000D",
     price: 700,
     productImage: epa3,
     productDesc:
-      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+      "BOAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
     tag: "epa",
   },
   {
     id: 7,
-    productName: "boAt jacket 1000D",
+    productName: "BOAt jacket 1000D",
     price: 228.0,
     productImage: hpa4,
     productDesc:
@@ -87,16 +87,16 @@ export const PRODUCTS = [
   },
   {
     id: 8,
-    productName: "boAt BAssHeads 00D",
+    productName: "BOAt BAssHeads 00D",
     price: 990,
     productImage: epa4,
     productDesc:
-      "boAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
+      "BOAt Bass Heads 200 polished metal earphonesare designed to give you an experience that no other brand can match. It has an incredible sonic clarity . With tangle-free flat cables, you are expected to be hassle-free. As the wired headphones feature 10mm drivers, they give you clear sound with that thumping bass. In-built noise-canceling mic ensures you don't miss those important calls. With colors that match your style in your day, these earphones are the ideal choice for anyone who can carry that attitude",
     tag: "epa",
   },
   {
     id: 9,
-    productName: "boAt Led 1000D",
+    productName: "BOAt Led 1000D",
     price: 199,
     productImage: hpb1,
     productDesc:
@@ -105,7 +105,7 @@ export const PRODUCTS = [
   },
   {
     id: 10,
-    productName: "boAt AirDopes ocean",
+    productName: "BOAt AirDopes ocean",
     price: 990,
     productImage: epb1,
     productDesc:
@@ -114,7 +114,7 @@ export const PRODUCTS = [
   },
   {
     id: 11,
-    productName: "boAt 1000D SPECTRUM ",
+    productName: "BOAt 1000D SPECTRUM ",
     price: 680,
     productImage: hpb2,
     productDesc:
@@ -124,7 +124,7 @@ export const PRODUCTS = [
 
   {
     id: 12,
-    productName: "boAt AirDopes Blackend",
+    productName: "BOAt AirDopes Blackend",
     price: 490,
     productImage: epb2,
     productDesc:
@@ -133,7 +133,7 @@ export const PRODUCTS = [
   },
   {
     id: 13,
-    productName: "boAt live 1000D",
+    productName: "BOAt live 1000D",
     price: 120.0,
     productImage: hpb3,
     productDesc:
@@ -143,7 +143,7 @@ export const PRODUCTS = [
 
   {
     id: 14,
-    productName: "boAt Airdopes blueDream",
+    productName: "BOAt Airdopes blueDream",
     price: 590,
     productImage: epb3,
     productDesc:
@@ -152,7 +152,7 @@ export const PRODUCTS = [
   },
   {
     id: 15,
-    productName: "boAt Immortal 1000D",
+    productName: "BOAt Immortal 1000D",
     price: 40.0,
     productImage: hpb4,
     productDesc:
@@ -161,7 +161,7 @@ export const PRODUCTS = [
   },
   {
     id: 16,
-    productName: "boAt AirDopes cyanide",
+    productName: "BOAt AirDopes cyanide",
     price: 660,
     productImage: epb4,
     productDesc:
@@ -170,7 +170,7 @@ export const PRODUCTS = [
   },
   {
     id: 17,
-    productName: "boAt Immortal 1000D",
+    productName: "BOAt Immortal 1000D",
     price: 400,
     productImage: hpc2,
     productDesc:
@@ -179,7 +179,7 @@ export const PRODUCTS = [
   },
   {
     id: 18,
-    productName: "boAt Rockerz bullet  Pro ",
+    productName: "BOAt Rockerz bullet  Pro ",
     price: 980,
     productImage: epc1,
     productDesc:
@@ -188,7 +188,7 @@ export const PRODUCTS = [
   },
   {
     id: 19,
-    productName: "boAt Immortal 1000D",
+    productName: "BOAt Immortal 1000D",
     price: 500,
     productImage: hpc4,
     productDesc:
@@ -198,7 +198,7 @@ export const PRODUCTS = [
 
   {
     id: 20,
-    productName: "boAt Rockerz Gradient Pro ",
+    productName: "BOAt Rockerz Gradient Pro ",
     price: 640,
     productImage: epc2,
     productDesc:
@@ -207,7 +207,7 @@ export const PRODUCTS = [
   },
   {
     id: 21,
-    productName: "boAt Rockerz Dominant  Pro ",
+    productName: "BOAt Rockerz Dominant  Pro ",
     price: 240,
     productImage: epc4,
     productDesc:

@@ -1,13 +1,14 @@
 import React from "react";
-import { banner } from "../assets/Product";
+import { banner, hpa3 } from "../assets/Product";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Shopcontext } from "../hooks/shop-context";
+
 const FooterBanner = () => {
+  const { setbigImage } = useContext(Shopcontext);
   const nav = useNavigate();
   return (
-    <section
-      className=' mt-[20px] relative flex 
-     text-white justify-between gap-10 items-center px-1 bg-red-600 h-[400px] w-full'
-    >
+    <section className='footerSection'>
       <div className='flex flex-col gap-10'>
         <h3 className='text-xl  font-bold sm:absolute top-5'>20% off </h3>
 
@@ -16,10 +17,7 @@ const FooterBanner = () => {
             FINE
           </h1>
 
-          <h1
-            className=' relative max-sm:text-8xl  text-[100px] sm:bottom-10
- font-bold text-white'
-          >
+          <h1 className=' relative max-sm:text-8xl  text-[100px] sm:bottom-10 font-bold text-white'>
             SMILE
           </h1>
         </div>
@@ -43,18 +41,15 @@ const FooterBanner = () => {
         >
           Beats Solo Air{" "}
         </p>
-        <a href='#d'>
-          <button
-            onClick={() => {
-              nav("/shop");
-            }}
-            className='text-red-600 w-[150px] absolute bottom-2 right-5 z-50
-        max-lg:w-[92px] max-lg:text-lg  py-2 text-2xl 
-         bg-white font-bold rounded-xl'
-          >
-            Shop Now
-          </button>
-        </a>{" "}
+        <button
+          onClick={() => {
+            setbigImage(hpa3);
+            nav("/shop");
+          }}
+          className='footerBtn'
+        >
+          Shop Now
+        </button>{" "}
       </div>
 
       <img

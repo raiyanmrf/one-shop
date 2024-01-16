@@ -2,10 +2,20 @@ import React from "react";
 import { banner } from "../assets/Product";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useEffect } from "react";
 const Hero = () => {
   const nav = useNavigate();
+  const scroll = useRef(null);
+
+  useEffect(() => {
+    scroll.current.scrollIntoView({ behavior: "auto" });
+  }, []);
   return (
-    <section className='px-2 relative top-0 flex flex-col  justify-center  bg-stone-300 h-[500px] w-full'>
+    <section
+      ref={scroll}
+      className='px-2 relative top-0 flex flex-col  justify-center  bg-stone-300 h-[500px] w-full'
+    >
       <p className='text-2xl relative left-1 sm:top-9'>Beats Solo </p>
       <h2 className='text-6xl max-sm:text-4xl relative font-bold max-sm:top-0 top-10'>
         Wireless
@@ -22,7 +32,7 @@ const Hero = () => {
         onClick={() => {
           nav("/shop");
         }}
-        className='bg-red-600 w-[150px] max-sm:w-[130px] max-sm:text-xl  py-2 text-2xl text-white font-bold relative z-50 rounded-xl'
+        className='heroBtn'
       >
         Shop Now
       </button>

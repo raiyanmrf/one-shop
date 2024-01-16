@@ -5,20 +5,28 @@ import { IoChevronBackSharp } from "react-icons/io5";
 import { useContext } from "react";
 import { Shopcontext } from "../hooks/shop-context";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   const [visa, setvisa] = useState(false);
   const [master, setmaster] = useState(false);
   const [ame, setame] = useState(false);
   const [paypal, setpaypal] = useState(false);
   const { setShowCheck, setShowCart } = useContext(Shopcontext);
+  const nav = useNavigate();
   return (
     <>
+      {" "}
+      <div>
+        <Toaster />
+      </div>
       <motion.form
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
         onSubmit={() => {
-          window.confirm("Are You Sure to Proceed");
+          nav("/");
+          toast.success("Payment is Successful");
         }}
         className='flex absolute container z-40 overscroll-y-scroll bg-white  top-0 right-0 gap-5
      py-8 justify-start items-start flex-col max-sm:w-[90%]  max-w-[500px] px-1 text-sm  '

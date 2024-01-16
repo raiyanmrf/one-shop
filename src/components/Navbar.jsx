@@ -12,7 +12,7 @@ const Navbar = () => {
     0
   );
   return (
-    <section className='fixed z-20 bg-white top-0 w-full'>
+    <section className='fixed z-50 bg-white top-0 w-full'>
       <nav className='px-7 py-3 text-slate-900 flex justify-between w-full '>
         <h2 className='text-4xl font-serif max-sm:text-4xl font-bold '>
           <Link
@@ -33,11 +33,7 @@ const Navbar = () => {
             }}
           >
             <ShoppingCart />
-            <span
-              className='absolute rounded-full w-[20px]  font-extralight font-mono
-            text-center bg-red-600 text-white text-sm
-            bottom-9 right-[17px]'
-            >
+            <span className='navBarCounter'>
               {totalQuantity > 0 && totalQuantity}
             </span>
           </div>

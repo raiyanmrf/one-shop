@@ -2,6 +2,8 @@ import React from "react";
 import ProductDetail from "../components/ProductDetail";
 import { motion } from "framer-motion";
 import Products from "../components/Products";
+
+import Footer from "../components/Footer";
 import FooterBanner from "../components/FooterBanner";
 
 const Shop = () => {
@@ -23,6 +25,7 @@ const Shop = () => {
         <Products />
       </section>
       <FooterBanner />
+      <Footer />
     </motion.main>
   );
 };

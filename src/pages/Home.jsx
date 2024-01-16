@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Products from "../components/Products";
 import FooterBanner from "../components/FooterBanner";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <motion.main
@@ -16,9 +17,7 @@ const Home = () => {
       <Hero />
       <Products />
       <FooterBanner />
-      <div className=' mt-14 text-center text-stone-500'>
-        <p>All rights reserved to boats</p>
-      </div>
+      <Footer />
     </motion.main>
   );
 };

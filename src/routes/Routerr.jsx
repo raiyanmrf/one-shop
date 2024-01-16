@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Shop from "../pages/Shop";
 import { Shopcontext } from "../hooks/shop-context";
@@ -8,12 +8,13 @@ import { useContext } from "react";
 import CartDummy from "../pages/CartDummy";
 import Checkout from "../pages/Checkout";
 import ProductDetail from "../components/ProductDetail";
+import Footer from "../components/Footer";
 
 const Routerr = () => {
   const { showCart, showCheck } = useContext(Shopcontext);
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         {showCart === true && <CartDummy />}
         {showCheck === true && <Checkout />}
@@ -22,7 +23,7 @@ const Routerr = () => {
           <Route path='/shop' element={<Shop />} />
           <Route path='/d' element={<ProductDetail />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };

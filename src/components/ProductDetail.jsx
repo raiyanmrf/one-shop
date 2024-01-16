@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { PRODUCTS, hpa3 } from "../assets/Product";
+import { PRODUCTS } from "../assets/Product";
 import { Shopcontext } from "../hooks/shop-context";
 import {
   AiOutlineStar,
@@ -8,6 +8,9 @@ import {
   AiOutlineMinus,
 } from "react-icons/ai";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const ProductDetail = () => {
   const [showDetails, setshowDetails] = useState(false);
@@ -17,15 +20,22 @@ const ProductDetail = () => {
     removeFromcart,
     updateCartItem,
     smallImages,
-
     bigImage,
     setbigImage,
   } = useContext(Shopcontext);
+  const scrollUp = useRef(null);
+
+  useEffect(() => {
+    scrollUp.current.scrollIntoView({ behavior: "auto" });
+  }, [bigImage]);
   return (
     <>
-      <article id='d' className='absolute top-0   '>
+      <div>
+        <Toaster />
+      </div>
+      <article className='absolute top-0   '>
         {" "}
-        <div>
+        <div ref={scrollUp}>
           <motion.div
             animate={{ y: 0 }}
             initial={{ y: "100%" }}
@@ -51,14 +61,18 @@ const ProductDetail = () => {
         </div>
       </article>
 
-      <article className='w-[100%] h-[100vh] sm:w-[80%] md:w-[70%] lg:w-[60%] relative z-10 flex justify-center items-center container'>
+      <article
+        className='w-[100%] h-[100vh] sm:w-[80%] md:w-[70%] lg:w-[60%] relative 
+      z-10 flex justify-center items-center container'
+      >
         {PRODUCTS &&
           PRODUCTS.filter(p => p.productImage === bigImage).map(p => {
             return (
               <div key={p.id} className=' w-full h-[80vh] p-1 '>
                 <h2
                   className='font-bold max-lg:text-sm text-xl md:font-extrabold px-1
-                  max-lg:text-white max-lg:bg-black max-lg:-z-0 bg-opacity-70 inline-block  mb-2'
+                  max-lg:text-white max-lg:bg-black max-lg:-z-0 bg-opacity-70 
+                  inline-block  mb-2'
                 >
                   {p.productName}
                 </h2>
@@ -91,7 +105,10 @@ const ProductDetail = () => {
                   <AiOutlineStar style={{ color: "red" }} />
                 </div>
                 <div className='flex w-full justify-end'>
-                  <h3 className='text-red-600 text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold mt-5'>
+                  <h3
+                    className='text-red-600 text-xl sm:text-4xl md:text-5xl 
+                  lg:text-6xl xl:text-8xl font-extrabold mt-5'
+                  >
                     ${p.price}
                   </h3>
                 </div>
@@ -100,10 +117,16 @@ const ProductDetail = () => {
                     Quantity:
                   </span>
                   <span
-                    className='border bg-black bg-opacity-70 border-none xl:bg-transparent xl:text-black text-white
+                    className='border bg-black bg-opacity-70 border-none
+                     xl:bg-transparent xl:text-black text-white
                     font-mono flex justify-center items-center'
                   >
-                    <AiOutlinePlus onClick={() => addTocart(p.id)} />
+                    <AiOutlinePlus
+                      onClick={() => {
+                        toast.success(`${p.productName} added to cart`);
+                        addTocart(p.id);
+                      }}
+                    />
                     <input
                       className='w-5 text-center  text-black '
                       type='text'
@@ -118,9 +141,11 @@ const ProductDetail = () => {
                 <div className='flex items-center justify-end gap-3 mt-10'>
                   <button
                     onClick={() => {
+                      toast.success(`${p.productName} added to cart`);
                       addTocart(p.id);
                     }}
-                    className='text-white text-sm md:text-lg font-extrabold whitespace-nowrap   border-black bg-red-600  px-1'
+                    className='text-white text-sm md:text-lg font-extrabold whitespace-nowrap 
+                      border-black bg-red-600  px-1'
                   >
                     Add to Cart
                   </button>
