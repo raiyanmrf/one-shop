@@ -7,13 +7,14 @@ import { Shopcontext } from "../hooks/shop-context";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import CartItems from "./CartItems";
 const Checkout = () => {
   const [visa, setvisa] = useState(false);
   const [master, setmaster] = useState(false);
   const [ame, setame] = useState(false);
   const [paypal, setpaypal] = useState(false);
-  const { setShowCheck, setShowCart } = useContext(Shopcontext);
-  const nav = useNavigate();
+  const { setShowCheck, setShowCart, emptyCartItem } = useContext(Shopcontext);
+
   return (
     <>
       {" "}
@@ -25,8 +26,10 @@ const Checkout = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
         onSubmit={() => {
-          nav("/");
           toast.success("Payment is Successful");
+
+          setShowCheck(false);
+          emptyCartItem();
         }}
         className='flex absolute container  z-50 overscroll-y-scroll bg-white  top-0 right-0 gap-5
      py-8 justify-start items-start flex-col max-sm:w-[90%]  max-w-[500px] px-1 text-sm  '
@@ -196,7 +199,7 @@ const Checkout = () => {
             className='bg-green-700 font-mono font-bold mt-10 whitespace-nowrap w-full px-[2rem] py-2 text-white  rounded-full'
             type='submit'
           >
-            Proceed to Checkout
+            PAY
           </button>
         </div>
       </motion.form>

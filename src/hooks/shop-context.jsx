@@ -23,11 +23,15 @@ export const ShopcontextProvider = props => {
   const removeFromcart = itemId => {
     setcartItems(prev => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
+
   const updateCartItem = (newAmount, itemId) => {
     setcartItems(prev => ({ ...prev, [itemId]: newAmount }));
   };
   const delelteCartItem = itemId => {
     setcartItems(prev => ({ ...prev, [itemId]: 0 }));
+  };
+  const emptyCartItem = itemId => {
+    setcartItems(defaultShoppingCart);
   };
   const addSubtotal = () => {
     let totalAmount = 0;
@@ -58,6 +62,7 @@ export const ShopcontextProvider = props => {
     delelteCartItem,
     showCheck,
     setShowCheck,
+    emptyCartItem,
   };
 
   return (

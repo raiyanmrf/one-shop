@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { PRODUCTS } from "../assets/Product";
 import { Shopcontext } from "../hooks/shop-context";
-import CartItems from "../components/CartItems";
+import CartItems from "./CartItems";
 import { ShoppingBagOpen } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { IoChevronBackSharp } from "react-icons/io5";

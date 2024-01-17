@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { ShopcontextProvider } from "./hooks/shop-context";
-import Routerr from "./routes/Routerr";
+import Routerr from "./routes/index";
 
 function App() {
   return (
