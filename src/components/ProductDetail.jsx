@@ -70,9 +70,8 @@ const ProductDetail = () => {
             return (
               <div key={p.id} className=' w-full h-[80vh] p-1 '>
                 <h2
-                  className='font-bold max-lg:text-sm text-xl md:font-extrabold px-1
-                  max-lg:text-white max-lg:bg-black max-lg:-z-0 bg-opacity-70 
-                  inline-block  mb-2'
+                  className='font-bold max-lg:text-sm text-xl md:font-extrabold px-1 max-lg:text-white max-lg:bg-black
+                  max-lg:-z-0 bg-opacity-70 inline-block  mb-2'
                 >
                   {p.productName}
                 </h2>
@@ -90,25 +89,21 @@ const ProductDetail = () => {
                   </button>
                   {showDetails && (
                     <p
-                      className='max-sm:text-[11px] 
-                    absolute bg-stone-100 bg-opacity-90 sm:p-5 
+                      className='max-sm:text-[11px]  absolute bg-stone-100 bg-opacity-90 sm:p-5 
                     font-semibold text-sm max-w-lg '
                     >
                       {p.productDesc.slice(0, 400)}.
                     </p>
                   )}
                 </div>
-                <div className='flex w-full justify-end'>
-                  <AiFillStar style={{ color: "red" }} />
-                  <AiFillStar style={{ color: "red" }} />
-                  <AiFillStar style={{ color: "red" }} />
-                  <AiOutlineStar style={{ color: "red" }} />
+                <div className='flex w-full text-red-600 justify-end'>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiOutlineStar />
                 </div>
                 <div className='flex w-full justify-end'>
-                  <h3
-                    className='text-red-600 text-xl sm:text-4xl md:text-5xl 
-                  lg:text-6xl xl:text-8xl font-extrabold mt-5'
-                  >
+                  <h3 className='text-red-600 text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold mt-5'>
                     ${p.price}
                   </h3>
                 </div>
@@ -117,8 +112,7 @@ const ProductDetail = () => {
                     Quantity:
                   </span>
                   <span
-                    className='border bg-black bg-opacity-70 border-none
-                     xl:bg-transparent xl:text-black text-white
+                    className='border bg-black bg-opacity-70 border-none xl:bg-transparent xl:text-black text-white
                     font-mono flex justify-center items-center'
                   >
                     <AiOutlinePlus
